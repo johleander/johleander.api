@@ -27,3 +27,23 @@ export const fixtures = () => {
 
   return APIManager.request(options);
 } 
+
+export const lineups = (fixtureId: string) => {
+      
+  const LINEUPS_ENDPOINT = `${BASE_URL}/fixtures/lineups`;
+
+  let options = getOptions(LINEUPS_ENDPOINT);
+  options.params = {fixture: fixtureId};
+
+  return APIManager.request(options);
+} 
+
+export const teams = () => {
+
+  const TEAMS_ENDPOINT = `${BASE_URL}/teams`;
+
+  let options = getOptions(TEAMS_ENDPOINT);
+  options.params = {league: '39', season: '2021'};
+
+  return APIManager.request(options);
+} 

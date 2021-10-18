@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import {fixtures} from "../apis/API-Football/endpoints";
+import {fixtures,teams, lineups} from "../apis/API-Football/endpoints";
 import {general,fixtures as fpl_fixtures, user_history, user_basic} from "../apis/FPL/endpoints";
 
 export class FootballService {
@@ -30,8 +30,14 @@ export class FootballService {
  
 
 /* API-FOOTBALL */
+   public getTeams =  () => {
+      return teams();
+}  
    public getFixtures =  () => {
       return fixtures();
+   }
+   public getLineups =  (fixtureId: string) => {
+      return lineups(fixtureId);
    }
     
    

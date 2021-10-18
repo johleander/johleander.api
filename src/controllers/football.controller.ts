@@ -10,8 +10,16 @@ export class FootballController {
         this.footballService = new FootballService();
     }
 
+    private getTeams = async (req: Request, res: Response) => {
+        res.json((await this.footballService.getTeams()).data);
+    }
+
     private getFixtures= async (req: Request, res: Response) => {
         res.json((await this.footballService.getFixtures()).data);
+    }
+
+    private getLineups= async (req: Request, res: Response) => {
+        res.json((await this.footballService.getLineups(req.query.fixtureId as string)).data);
     }
 
     private getFPLFixtures= async (req: Request, res: Response) => {
@@ -35,7 +43,9 @@ export class FootballController {
     }
 
     public routes() {
+        this.router.get("/teams", this.getTeams);
         this.router.get("/fixtures", this.getFixtures);
+        this.router.get("/lineups", this.getLineups);
         this.router.get("/fplfixtures", this.getFPLFixtures);
         this.router.get("/fplgeneral", this.getFPLGeneralInfo);
         this.router.get("/fpluserbasic", this.getFPLUserBasic);
