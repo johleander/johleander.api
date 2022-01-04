@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./build", 
+    "outDir": "dist", 
     "rootDirs": ["./src"],
     "lib": ["es5", "es6", "dom"],
     "target": "es5",
