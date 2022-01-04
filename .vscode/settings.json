@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/98ebd1aa-10a2-422d-b502-c1352e1349e2/resourceGroups/johleander-rg/providers/Microsoft.Web/sites/johleander-api",
+    "appService.deploySubpath": "."
+}
