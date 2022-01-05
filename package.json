@@ -2,7 +2,7 @@
   "name": "johleander.api",
   "version": "1.0.0",
   "description": "Access different APIs etc",
-  "main": "app.js",
+  "main": "server.js",
   "devDependencies": {
     "@types/express": "^4.17.12",
     "@types/node": "^15.12.4",
