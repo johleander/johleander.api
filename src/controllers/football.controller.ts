@@ -11,34 +11,34 @@ export class FootballController {
     }
 
     private getTeams = async (req: Request, res: Response) => {
-        res.json((await this.footballService.getTeams()).data);
+        return res.json((await this.footballService.getTeams()).data);
     }
 
     private getFixtures= async (req: Request, res: Response) => {
-        res.json((await this.footballService.getFixtures()).data);
+        return res.json((await this.footballService.getFixtures()).data);
     }
 
     private getLineups= async (req: Request, res: Response) => {
-        res.json((await this.footballService.getLineups(req.query.fixtureId as string)).data);
+        return res.json((await this.footballService.getLineups(req.query.fixtureId as string)).data);
     }
 
     private getFPLFixtures= async (req: Request, res: Response) => {
-        res.json((await this.footballService.getFPLFixtures()).data);
+        return res.json((await this.footballService.getFPLFixtures()).data);
 
     }
 
     private getFPLGeneralInfo = async (req: Request, res: Response) => {
-        res.json((await this.footballService.getFPLGeneralInfo()).data);
+        return res.json((await this.footballService.getFPLGeneralInfo()).data);
 
     }
 
     private getFPLUserBasic = async (req: Request, res: Response) => {
-        res.json((await this.footballService.getFPLUserBasic()).data);
+        return res.json((await this.footballService.getFPLUserBasic()).data);
 
     }
 
     private getFPLUserHistory = async (req: Request, res: Response) => {
-        res.json((await this.footballService.getFPLUserHistory()).data);
+        return res.json((await this.footballService.getFPLUserHistory()).data);
 
     }
 
